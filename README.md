@@ -138,7 +138,6 @@ This application is built using Electron, allowing it to run as a native desktop
 ![image](https://github.com/user-attachments/assets/d7c25c93-aea2-4b21-be37-42b1e96be27a)
 
 ![image](https://github.com/user-attachments/assets/0be94f53-48dc-412f-a01c-bf0c60f17b15)
-![image](https://github.com/user-attachments/assets/d31c49d5-1d9d-4af3-89e7-522de2849e6b)
 
 
 ![image](https://github.com/user-attachments/assets/617c1072-f4f0-4620-8687-95a9734f5cfd)
