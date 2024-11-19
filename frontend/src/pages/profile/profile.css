@@ -1,0 +1,7 @@
+/* Add this to create spacing below navbar */
+.profile-container {
+  padding-top: 10rem;  /* or adjust value as needed */
+  margin: 0 auto;     /* optional: center content horizontally */
+  padding-right: 2rem;
+  overflow: auto;
+}

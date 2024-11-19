@@ -1,0 +1,63 @@
+.engine-diagram {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  .diagram-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .diagram-url {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 8px 12px;
+      border-radius: 4px;
+      
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .diagram-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .diagram-placeholder {
+      text-align: center;
+      color: #666;
+      p {
+        margin: 5px 0;
+      }
+    }
+    
+    .annotation {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      
+      .annotation-text {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+  }
+} 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Engine Block -->
+  <rect x="200" y="150" width="400" height="300" fill="#ddd" stroke="#333" stroke-width="2"/>
+  
+  <!-- Cylinder Head -->
+  <rect x="200" y="100" width="400" height="50" fill="#ccc" stroke="#333" stroke-width="2"/>
+  
+  <!-- Cylinders -->
+  <circle cx="300" cy="250" r="40" fill="#eee" stroke="#333" stroke-width="2"/>
+  <circle cx="400" cy="250" r="40" fill="#eee" stroke="#333" stroke-width="2"/>
+  <circle cx="500" cy="250" r="40" fill="#eee" stroke="#333" stroke-width="2"/>
+  
+  <!-- Crankshaft -->
+  <rect x="150" y="400" width="500" height="20" fill="#999" stroke="#333" stroke-width="2"/>
+  
+  <!-- Labels -->
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="14">Cylinder Head</text>
+  <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="14">Engine Block</text>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial" font-size="14">Crankshaft</text>
+</svg>

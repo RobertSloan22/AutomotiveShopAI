@@ -1,0 +1,156 @@
+[data-component='ConsolePage'] {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0px 8px;
+  color: #ffffff;
+  flex-shrink: 0;
+
+  .content-block {
+    background-color: rgba(128, 128, 128, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .content-block-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+  }
+
+  .content-block-body {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .conversation-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+
+    .speaker {
+      &.user {
+        color: #3b82f6;
+      }
+      &.assistant {
+        color: #10b981;
+      }
+    }
+
+    .speaker-content {
+      color: #ffffff;
+    }
+  }
+
+  .event {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .event-source {
+      &.client {
+        color: #3b82f6;
+      }
+      &.server {
+        color: #10b981;
+      }
+      &.error {
+        color: #ef4444;
+      }
+    }
+  }
+
+  button {
+    background-color: rgba(59, 130, 246, 0.5);
+    color: white;
+    border: 1px solid rgba(59, 130, 246, 0.7);
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgba(59, 130, 246, 0.7);
+    }
+
+    &.button-style-alert {
+      background-color: rgba(239, 68, 68, 0.5);
+      border-color: rgba(239, 68, 68, 0.7);
+      
+      &:hover {
+        background-color: rgba(239, 68, 68, 0.7);
+      }
+    }
+
+    &.button-style-action {
+      background-color: rgba(16, 185, 129, 0.5);
+      border-color: rgba(16, 185, 129, 0.7);
+      
+      &:hover {
+        background-color: rgba(16, 185, 129, 0.7);
+      }
+    }
+  }
+
+  .content-main {
+    display: flex;
+    height: calc(100vh - 60px); // Subtract header height
+    overflow: hidden;
+
+    .content-logs {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .content-block.events {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        .content-block-body {
+          flex: 1;
+          overflow-y: auto;
+        }
+      }
+    }
+
+    .content-right {
+      width: 400px;
+      min-width: 400px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-left: 16px;
+
+      .content-block {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .content-block-body {
+          flex: 1;
+          overflow-y: auto;
+
+          &.full {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

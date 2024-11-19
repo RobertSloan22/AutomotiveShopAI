@@ -1,0 +1,116 @@
+{
+  "name": "auto-repair-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm run dev",
+    "electron": "concurrently \"npm run server\" \"cd frontend && npm run electron:dev\"",
+    "build": "cd frontend && npm run electron:build",
+    "start": "electron-forge start",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "make:win": "electron-builder --win",
+    "make:mac": "electron-builder --mac",
+    "make:linux": "electron-builder --linux",
+    "make:linux-docker": "docker run --rm -ti -v %cd%:/project electronuserland/builder:wine /bin/bash -c \"cd /project && yarn && yarn make:linux\"",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "robertsloan",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@langchain/anthropic": "^0.3.7",
+    "@langchain/community": "^0.3.14",
+    "@langchain/core": "^0.3.18",
+    "@langchain/langgraph": "^0.2.19",
+    "@langchain/openai": "^0.3.11",
+    "@langchain/textsplitters": "^0.1.0",
+    "@mui/icons-material": "^6.1.7",
+    "@mui/material": "^6.1.7",
+    "@types/node": "^20.0.0",
+    "@types/react-helmet": "^6.1.11",
+    "@types/ws": "^8.5.13",
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.6",
+    "csv-parser": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "electron-squirrel-startup": "^1.0.1",
+    "express": "^4.21.1",
+    "express-async-handler": "^1.2.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "langchain": "^0.3.5",
+    "mongoose": "^8.7.3",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.72.0",
+    "pdfjs-dist": "^4.8.69",
+    "react-big-calendar": "^1.15.0",
+    "react-feather": "^2.0.10",
+    "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.4.1",
+    "react-toastify": "^10.0.6",
+    "socket.io": "^4.7.4",
+    "web3": "^4.15.0",
+    "ws": "^8.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "@electron-forge/plugin-fuses": "^7.5.0",
+    "@electron/fuses": "^1.8.0",
+    "concurrently": "^9.0.1",
+    "electron": "^33.1.0",
+    "electron-is-dev": "^3.0.1",
+    "nodemon": "^3.1.7",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.yourcompany.autorepair",
+    "productName": "Auto Repair Shop",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "proxy": "http://localhost:3001"
+}

@@ -1,0 +1,14 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Add padding to the main content to prevent it from hiding under the nav */
+.main-content {
+    padding-top: 150px;
+     /* Adjust this value based on your navbar height */
+}
+

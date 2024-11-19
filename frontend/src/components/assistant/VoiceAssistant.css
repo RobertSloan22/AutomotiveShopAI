@@ -1,0 +1,50 @@
+.voice-assistant {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.message.user {
+  background-color: #e3f2fd;
+  align-self: flex-end;
+}
+
+.message.assistant {
+  background-color: #f5f5f5;
+  align-self: flex-start;
+}
+
+button {
+  padding: 15px 30px;
+  border-radius: 25px;
+  border: none;
+  background-color: #0099ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0077cc;
+} 

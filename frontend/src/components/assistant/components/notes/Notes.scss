@@ -1,0 +1,46 @@
+.notes {
+    .note-entry {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 0;
+      width: 100%;
+  
+      .note-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+  
+        .timestamp {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 0.9em;
+        }
+  
+        .topic {
+          font-weight: bold;
+        }
+  
+        .tags {
+          display: flex;
+          gap: 8px;
+          
+          .tag {
+            background: rgba(59, 130, 246, 0.2);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+          }
+        }
+      }
+  
+      .key-points, .code-examples, .resources {
+        margin: 12px 0;
+      }
+  
+      pre {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 12px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+    }
+  }
